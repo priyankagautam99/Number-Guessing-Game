@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Guess Number Please...</h2>
+            <input type="text" placeholder="Enter Number" id="inputno">
+            <button onclick="guess()">Start</button>
+        </div>
+    </div>
+    <script>
+        let guessed = Math.floor(Math.random()*10);
+        function guess(){
+            let input = document.getElementById("inputno").value;
+            let ans = parseInt(input);
+            if(ans==guessed){
+                alert("You won the game");
+            }
+            else if(ans<guessed){
+                alert("Guess higher number")
+            }
+            else{
+                alert("Guess lower number")
+            }
+        }
+    </script>
+
+</body>
+</html>
